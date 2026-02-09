@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daisy Luxe - Appointment Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <section id="appiontment-container">
+        <div class="appiontment-container">
+            <h1>Appointment Request</h1>
+            <p>Fill out the form below to request an appointment with <span>Daisy Luxe Beauty Salon</span></p>
+            <div class="appointment">
+                 <a href="../home.html"><span class="tag tag-back"><i class="fa-solid fa-angle-left"></i></span></a>
+                <input type="name" name="name" placeholder="First Name" required>
+                <input type="name" name="name" placeholder="Last Name" required><br>
+                <input type="email" name="email" id="email" placeholder="Email Address" required>
+                <input type="number" name="phone_number" placeholder="phone_Nsumber" required><br>
+                <select name="select" class="select" >
+                    <option value="hair">--Chose a Services--</option>
+                    <option value="hair">Hair Styling</option>
+                    <option value="hair">Markup</option>
+                    <option value="hair">Facial</option>
+                    <option value="hair">Lash & Brow</option>
+                    <option value="hair">Nail Fixing</option>
+                    <option value="hair">Body Wellness</option>
+                </select><br>
+                <input type="date" name="date" id="" placeholder="Preferred Date" required>
+                <input type="time" name="Preferred Time" placeholder="Preferred Time" required><br>
+                <textarea name="message" id="">Special Request Or Note</textarea required><br>
+
+                <a href="../home.html"><button type="submit" class="btn-primary">Book Appointment</button></a>
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>
