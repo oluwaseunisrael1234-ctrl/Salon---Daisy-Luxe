@@ -9,17 +9,17 @@
 </head>
 <body>
     <section id="appiontment-container">
-        <form action="">
+        <form action="" id="appointmentForm">
              <div class="appiontment-container">
             <h1>Appointment Request</h1>
             <p>Fill out the form below to request an appointment with <span>Daisy Luxe Beauty Salon</span></p>
             <div class="appointment">
                  <a href="../home.html"><span class="tag tag-back"><i class="fa-solid fa-angle-left"></i></span></a>
-                <input type="name" name="name" placeholder="First Name" required>
-                <input type="name" name="name" placeholder="Last Name" required><br>
-                <input type="email" name="email" id="email" placeholder="Email Address" required>
-                <input type="number" name="phone_number" placeholder="phone_Nsumber" required><br>
-                <select name="select" class="select" >
+                <input type="text" id="firstName" placeholder="First Name" required>
+                <input type="text" id="lastName" placeholder="Last Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="tel" id="phone" placeholder="WhatsApp Number" required>
+                <select name="select" class="select" id="service" >
                     <option value="hair">--Chose a Services--</option>
                     <option value="hair">Hair Styling</option>
                     <option value="hair">Markup</option>
@@ -28,16 +28,65 @@
                     <option value="hair">Nail Fixing</option>
                     <option value="hair">Body Wellness</option>
                 </select><br>
-                <input type="date" name="date" id="" placeholder="Preferred Date" required>
-                <input type="time" name="Preferred Time" placeholder="Preferred Time" required><br>
-                <textarea name="message" id="">Special Request Or Note</textarea required><br>
+                <input type="date" id="date" placeholder="Preferred Date" required>
+                <input type="time" id="time" placeholder="Preferred Time" required><br>
+                <textarea name="message" id="message" placeholder="Special Request Or Note"></textarea><br>
 
-                <a href="../home.html"><button type="submit" class="btn-primary">Book Appointment</button></a>
+                <button type="submit" class="btn-primary">Book Appointment</button>
                 
+                <p id="successMsg" style="display:none; color:green; font-weight:bold; margin-top:10px;">
+                ✅ WhatsApp opened! Please click SEND to complete your booking.</p>
+
             </div>
         </div>
 
         </form>
            </section>
+           <script>
+            document.getElementById("appointmentForm").addEventListener("submit" , function(e) {
+                e.preventDefault();
+
+                const firstName = document.getElementById("firstName"). value.trim();
+                const lastName = document.getElementById("lastName").value.trim();
+                const email = document.getElementById("email"). value.trim();
+                const phone = document.getElementById("phone"). value.trim();
+                const service = document.getElementById("service").value;
+                const date = document.getElementById("date").value;
+                const time = document.getElementById("time").value;
+                const message = document.getElementById("message"). value.trim();
+
+                const salonWhatsAppNumber = "2348132030245";
+
+                const whatsappMessage = `Hello Daisy Luxe I want to book an appointment.
+
+                First Name: ${firstName}
+                Last Name: ${lastName}
+                Email: ${email}
+                Phone: ${phone}
+                Service: ${service}
+                Date: ${date}
+                Time: ${time}
+
+                Message: ${message || "None"}`;
+
+
+                const whatsappURL = `https://wa.me/${salonWhatsAppNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+                window.open(whatsappURL, "_blank");
+
+                document.getElementById("successMsg").style.display = "block";
+
+    
+                setTimeout(() => {
+                    document.getElementById("appointmentForm").reset();
+                }, 2000);
+
+
+
+
+                alert("✅ WhatsApp opened! Please click SEND to complete your appointment request.");
+
+            });
+           </script>
 </body>
 </html>
