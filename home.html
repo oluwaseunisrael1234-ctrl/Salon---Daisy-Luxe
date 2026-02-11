@@ -25,7 +25,9 @@
                 <a href="../pages/about.html">About</a>
                 <a href="../pages/contact.html">Contact</a>
                 <a href="#"><i class="fa-solid fa-user"></i></a>
-                <a href="../pages/appointment.html"><button class="btn-primary" >Book Now</button></a>
+                <a href="../pages/appointment.html"><button type="button" class="btn btn-primary bookAppointmentBtn"> Book Now</button></a>
+                
+
             </nav>
         </div>
     </header>
@@ -36,8 +38,7 @@
                 <h1>Transform Your Look, <br>Redefine Your Beauty</h1>
                 <p>Experience luxury beauty treatments tailored to enhance your natural radiance and boost your confidence </p>
                 <p>Daisy Luxe -- Your Beauty Our Concern</p>
-                <a href="../pages/appointment.html"><button type="submit" class="hero-btn btn-primary">Book appointment</button></a>
-                
+                <a href="../pages/appointment.html"><button type="button" class="btn btn-primary bookAppointmentBtn"> Book Now</button></a>
                 
             </div>
         </section>
@@ -49,8 +50,7 @@
                 <div class="intro-content">
                     <h1>Services Beyond Expectation</h1>
                     <p>Premium beauty services, personalized with care and delivered beyond expectation, in a space designed for elegance and comfort. At Daisy Luxe, every detail is thoughtfully curated to create an indulgent experience that goes far beyond the ordinary. From the calming ambiance to the expert touch of our professionals, we focus on precision, quality, and personalized care. Using premium products and refined techniques, we enhance your natural beauty while ensuring you feel relaxed, confident, and truly pampered. Every visit is more than an appointment—it’s a luxurious escape where beauty meets excellence.</p>
-                    <a href="../pages/appointment.html"> <button type="submit" class="btn btn-primary">Book Now</button></a>
-                   
+                    <a href="../pages/appointment.html"><button type="button" class="btn btn-primary bookAppointmentBtn"> Book Now</button></a>
                 </div>
             </div>
         </section>
@@ -148,7 +148,7 @@
                         </div> 
                     </div>
                 </div>
-                <a href="../pages/appointment.html" class="btn-book btn-primary"> Book Now</a>
+                <a href="../pages/appointment.html"><button type="button" class="btn btn-primary btn-book"> Book Now</button></a>
             </div>
         </section>
 
@@ -210,7 +210,7 @@
             <div class="call-to-container">
                 <h1>Your Next Glow-Up Awaits ✨</h1>
                 <p>Book your appointment today and experience the Daisy Luxe difference. Our team of experts is <br> ready to help you look and feel your absolute best.</p>
-                <a href="../pages/appointment.html"><button class="btn btn-primary">Book Now</button></a>
+                <a href="../pages/appointment.html"><button type="button" class="btn btn-primary bookAppointmentBtn"> Book Now</button></a>
                 
             </div>
         </section>
@@ -267,25 +267,15 @@
     </footer>
 
     <!-- Mobile Booking Button -->
-
+    
     <a href="../pages/appointment.html" class="mobile-booking-btn">
         <i class="fas fa-calendar-check"></i>
     </a>
 
             </footer>
         </section>
-<script src="script.js">
-    const elements = document.querySelectorAll('.reveal');
+<script src="../js/script.js"></script>
 
-const obs = new IntersectionObserver((ent)=>{
-  ent.forEach(e=>{
-    if(e.isIntersecting) e.target.classList.add('active');
-  })
-});
-
-
-
-</script>
     </main>
 </body>
 </html>

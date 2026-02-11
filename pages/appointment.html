@@ -35,7 +35,7 @@
                 <button type="submit" class="btn-primary">Book Appointment</button>
                 
                 <p id="successMsg" style="display:none; color:green; font-weight:bold; margin-top:10px;">
-                ✅ WhatsApp opened! Please click SEND to complete your booking.</p>
+                ✅ Thank you for booking appointment with Daisy Luxe. We'll get back to you soon.</p>
 
             </div>
         </div>
@@ -43,6 +43,7 @@
         </form>
            </section>
            <script>
+            
             document.getElementById("appointmentForm").addEventListener("submit" , function(e) {
                 e.preventDefault();
 
@@ -84,9 +85,10 @@
 
 
 
-                alert("✅ WhatsApp opened! Please click SEND to complete your appointment request.");
+                alert("✅ Appointment request sent we'll get back to you soon.");
 
             });
+
            </script>
 </body>
 </html>

@@ -229,7 +229,7 @@ body{
     height: 430px;
     border: none;
     background: var(--gray);
-    box-shadow: 0 16px 50px rgb(0, 0, 0.16);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.432);
     transition: transform 0.5s ease;
     object-fit: cover;
 }
@@ -1078,7 +1078,7 @@ body{
 }
 .contact-form {
     width: 400px;
-    height: 500px;
+    height: 600px;
     padding: 25px;
     border-radius: 15px;
 }

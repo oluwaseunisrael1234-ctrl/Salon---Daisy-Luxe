@@ -1,17 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daisy Luxe - Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daisy Luxe - Login</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
+<style>
+  .log{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(5, 0, 40, 0.5)), url(../images/gallery/login-bk.jpeg);
+    background-size: contain;
+    background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    
+  }
+  .login-container{
+    height: 410px;
+    width: 40%;
+    background: rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.23);
+    margin: auto;
+    padding: 45px 30px;
+
+  }
+  .login-container h1{
+    text-align: center;
+    color: var(--dark);
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 35px;
+  }
+  .login-container input{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    transition: box-shadow 0.3s ease;
+  }
+  .login-container input:focus{
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    outline: none;
+  }
+  .login-container .btn-primary{
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 19px;
+    background: var(--dark);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .login-container p{
+    text-align: center;
+    margin-top: 15px;
+    color: var(--dark);
+  }
+  .login-container p a{
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 19px;
+  }
+  .login-container p a:hover{
+    text-decoration: underline;
+  }
+
+
+
+  @media (max-width: 768px) {
+    .login-container{
+      width: 90%;
+      padding: 20px;
+    }
+    .login-container h1{
+      font-size: 28px;
+    }
+    .login-container .btn-primary{
+      font-size: 17px;
+    }
+
+    
+  }
+  
+</style>
 <body>
-    <section>
-        <div class="login-container">
-            <input type="email" name="email" placeholder="Enter your email">
-            <input type="password" name="password" placeholder="Enter your password" required>
-            
-        </div>
-    </section>
+  <section class="log">
+    <div class="login-container">
+         <h1>Login</h1>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit" class="btn-primary">Login</button>
+    </form>
+    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    <p id="errorMsg" style="color:red;"></p>
+    </div>
+  </section>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCZUjImEMfnYndgP4hMvHoQcm7xoF8h59c",
+      authDomain: "daisy-luxe-auth.firebaseapp.com",
+      projectId: "daisy-luxe-auth",
+      storageBucket: "daisy-luxe-auth.firebasestorage.app",
+      messagingSenderId: "479690757867",
+      appId: "1:479690757867:web:8302922975512c201110ae"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    const loginForm = document.getElementById("loginForm");
+    const errorMsg = document.getElementById("errorMsg");
+
+    loginForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+
+        // Check if redirect query exists
+        const params = new URLSearchParams(window.location.search);
+        const redirect = params.get("redirect") || "../home.html";
+
+        window.location.href = redirect;
+
+      } catch (error) {
+        errorMsg.textContent = error.message;
+      }
+    });
+  </script>
 </body>
 </html>
