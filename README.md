@@ -83,7 +83,7 @@ Creating a real business website without backend
 4. Add an admin dashboard for managing bookings
 5. Improve animations and UI interactions
 
-Live Demo Live Website: https://daisyluxe.netlify.app/ GitHub Repository: https://github.com/oluwaseunisrael1234-ctrl/Salon Daisy-Luxe/
+Live Demo Live Website: https://daisyluxe.netlify.app/ GitHub Repository: https://github.com/oluwaseunisrael1234-ctrl/Salon--Daisy-Luxe/
 👨‍💻 Author
 Fayomade Israel Oluwaseun
 Web Developer
