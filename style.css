@@ -50,6 +50,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    
 }
 .section{
     padding: 70px 0;
@@ -606,7 +607,7 @@ body{
         position: fixed;
         top: 0;
         right: -100%;
-        width: 400px;
+        width: 300px;
         height: 100vh;
 
         background: var(--gray);
@@ -1557,4 +1558,309 @@ input ::placeholder{
     margin-left: -10px;
 }
 }
+
+
+
+
+/*overall media query for all pages*/
+/* ============================
+   RESPONSIVE MEDIA QUERIES
+   Mobile First: 300px+
+============================ */
+
+/* --------- 300px - 359px (Very Small Phones) --------- */
+@media (max-width: 359px) {
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+    line-height: 1.2;
+    padding: 0 10px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+
+  .hero-btn {
+    font-size: 16px;
+    padding: 10px 18px;
+  }
+
+  .nav-links {
+    width: 100%;
+    padding: 25px 20px;
+  }
+
+  .intro-content img {
+    width: 100%;
+    height: auto;
+  }
+
+  #services h1,
+  #gallery h1,
+  .tesimonial h1 {
+    font-size: 28px;
+  }
+
+  .Services-content,
+  .Services-content img {
+    width: 100%;
+  }
+
+  #booking-container {
+    width: 100%;
+    height: 280px;
+    border-radius: 20px;
+  }
+
+  .step {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .step-content {
+    padding: 0;
+  }
+
+  .gallery-img {
+    width: 100%;
+    height: 280px;
+  }
+
+  .tesimonial-content {
+    width: 100%;
+    height: auto;
+  }
+
+  .tesimonial-content img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .contact-form {
+    width: 100%;
+    height: auto;
+  }
+
+  #appiontment-container {
+    width: 95%;
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  input,
+  .select {
+    width: 96%;
+  }
+}
+
+
+/* --------- 360px - 479px (Small Phones) --------- */
+@media (min-width: 360px) and (max-width: 479px) {
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-btn {
+    font-size: 18px;
+    padding: 12px 20px;
+  }
+
+  .intro-content img {
+    width: 100%;
+    height: auto;
+  }
+
+  .Services-content,
+  .Services-content img {
+    width: 100%;
+  }
+
+  #booking-container {
+    width: 100%;
+    height: 320px;
+  }
+
+  .gallery-img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .tesimonial-content {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-form {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/* --------- 480px - 599px (Large Phones) --------- */
+@media (min-width: 480px) and (max-width: 599px) {
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .intro-content img {
+    width: 100%;
+    height: auto;
+  }
+
+  #booking-container {
+    width: 100%;
+    height: 350px;
+  }
+
+  .Services-content,
+  .Services-content img {
+    width: 100%;
+  }
+
+  .gallery-img {
+    width: 90%;
+    height: 330px;
+  }
+
+  .tesimonial-content {
+    width: 90%;
+    height: auto;
+  }
+}
+
+
+/* --------- 600px - 767px (Small Tablets) --------- */
+@media (min-width: 600px) and (max-width: 767px) {
+
+  .hero-content h1 {
+    font-size: 45px;
+  }
+
+  .intro-content img {
+    width: 450px;
+    height: auto;
+  }
+
+  #booking-container {
+    width: 90%;
+    height: 380px;
+  }
+
+  .gallery-img {
+    width: 45%;
+    height: 300px;
+  }
+
+  .tesimonial-container {
+    flex-direction: column;
+  }
+
+  .tesimonial-content {
+    width: 80%;
+    height: auto;
+  }
+}
+
+
+/* --------- 768px - 991px (Tablets) --------- */
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .hero-content h1 {
+    font-size: 55px;
+  }
+
+  #intro {
+    flex-direction: column;
+  }
+
+  .intro-content img {
+    width: 550px;
+    height: auto;
+  }
+
+  #booking-process {
+    flex-direction: column;
+  }
+
+  #booking-container {
+    width: 80%;
+    height: 420px;
+  }
+
+  .gallery-img {
+    width: 45%;
+    height: 330px;
+  }
+
+  .tesimonial-container {
+    flex-wrap: wrap;
+  }
+
+  .tesimonial-content {
+    width: 45%;
+    height: auto;
+  }
+}
+
+
+/* --------- 992px - 1199px (Laptops) --------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .intro-content img {
+    width: 480px;
+    height: auto;
+  }
+
+  #booking-container {
+    width: 60%;
+  }
+
+  .tesimonial-content {
+    width: 320px;
+  }
+}
+
+
+/* --------- 1200px+ (Large Screens) --------- */
+@media (min-width: 1200px) {
+
+  .hero-content h1 {
+    font-size: 70px;
+  }
+
+  #booking-container {
+    width: 65%;
+  }
+
+  .gallery-img {
+    width: 300px;
+    height: 330px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content,
+  .about-header,
+  .contact-header,
+  .gallery-hero {
+    background-attachment: scroll;
+  }
+}
+
 
