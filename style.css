@@ -274,7 +274,7 @@ body{
 #booking-container video{
     width: 120%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transform: translateX(-10%);
     border-radius: 50px;
 }
@@ -648,6 +648,12 @@ body{
 }
 .section{
     padding: 70px 25px;
+}
+.service-content{
+    width: 345px;
+}
+.service-content img{
+    width: 345px;
 }
 #booking-process {
     
